@@ -1,0 +1,233 @@
+@startuml
+
+title __CONTROLLERS's Class Diagram__\n
+
+  namespace Controllers {
+    class Controllers.AdminController {
+        - addSuccess_label : Label
+        - addUser_name_field : TextField
+        - addUser_otchestvo_field : TextField
+        - addUser_password_field : TextField
+        - addUser_surname_field : TextField
+        - addZpph_column : TableColumn<User, Double>
+        - add_user_button : Button
+        - amount_addzpph_field : TextField
+        - amount_baseZp_field : TextField
+        - amount_extramoney_field : TextField
+        - amount_illhours_field : TextField
+        - amount_workhours_field : TextField
+        - db_table : TableView<User>
+        - delete_user_button : Button
+        - extraMoney_column : TableColumn<User, Double>
+        - finalZP_label : Label
+        - finalZpResult_button_1 : Button
+        - finalZpResult_label : Label
+        - illHours_column : TableColumn<User, Double>
+        - isExtraMoney_column : TableColumn<User, String>
+        - isextramoney_checkbox : CheckBox
+        - location : URL
+        - name_column : TableColumn<User, String>
+        - otchestvo_column : TableColumn<User, String>
+        - pieChart_Update_button : Button
+        - pie_ZpStat_chart : PieChart
+        - position_column : TableColumn<User, String>
+        - positions : ToggleGroup
+        - positions1 : ToggleGroup
+        - rb_position_adm : RadioButton
+        - rb_position_adm1 : RadioButton
+        - rb_position_buhg : RadioButton
+        - rb_position_buhg1 : RadioButton
+        - rb_position_dir : RadioButton
+        - rb_position_dir1 : RadioButton
+        - rb_position_manager : RadioButton
+        - rb_position_manager1 : RadioButton
+        - resources : ResourceBundle
+        - resultID_column : TableColumn<UserResult, Integer>
+        - resultName_column : TableColumn<UserResult, String>
+        - resultOtxhestvo_column : TableColumn<UserResult, String>
+        - resultPositon_column : TableColumn<UserResult, String>
+        - resultSurname_column : TableColumn<UserResult, String>
+        - resultTableUpdate_button : Button
+        - resultZP_column : TableColumn<UserResult, Double>
+        - result_table : TableView<UserResult>
+        - set_addzpph_button : Button
+        - set_base_zp_button : Button
+        - set_extramoney_button : Button
+        - set_illhours_button : Button
+        - set_isextramoney_button : Button
+        - set_workhours_button : Button
+        - surname_column : TableColumn<User, String>
+        - totalZP_label : Label
+        - update_table_button : Button
+        - user_id_column : TableColumn<User, Integer>
+        - user_to_del_id_field : TextField
+        - usersData : ObservableList<User>
+        - usertoorkId_field : TextField
+        - wotkHours_column : TableColumn<User, Double>
+        ~ initialize()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.BughalterController {
+        ~ ois : ObjectInputStream
+        ~ oos : ObjectOutputStream
+        - addZpph_column : TableColumn<User, Double>
+        - amount_addzpph_field : TextField
+        - amount_extramoney_field : TextField
+        - amount_illhours_field : TextField
+        - amount_workhours_field : TextField
+        - db_table : TableView<User>
+        - extra : Button
+        - extraMoney_column : TableColumn<User, Double>
+        - finalZpResult_button_1 : Button
+        - finalZpResult_label : Label
+        - hours : Button
+        - illHours_column : TableColumn<User, Double>
+        - isExtraMoney_column : TableColumn<User, String>
+        - isextramoney_checkbox : CheckBox
+        - location : URL
+        - name : Text
+        - name_column : TableColumn<User, String>
+        - otchestvo_column : TableColumn<User, String>
+        - othestvo : Text
+        - position : Text
+        - position_column : TableColumn<User, String>
+        - resources : ResourceBundle
+        - result1 : Text
+        - result2 : Text
+        - set_addzpph_button : Button
+        - set_extramoney_button : Button
+        - set_illhours_button : Button
+        - set_isextramoney_button : Button
+        - set_workhours_button : Button
+        - surname : Text
+        - surname_column : TableColumn<User, String>
+        - update_table_button : Button
+        - user_id_column : TableColumn<User, Integer>
+        - userid : Text
+        - usersData : ObservableList<User>
+        - usertoorkId_field : TextField
+        - wotkHours_column : TableColumn<User, Double>
+        - zp : Button
+        - zpph : Button
+        ~ initialize()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.DirectorController {
+        ~ ois : ObjectInputStream
+        ~ oos : ObjectOutputStream
+        - addSuccess_label : Label
+        - addUser_name_field : TextField
+        - addUser_otchestvo_field : TextField
+        - addUser_password_field : TextField
+        - addUser_surname_field : TextField
+        - addZpph_column : TableColumn<User, Double>
+        - add_user_button : Button
+        - amount_addzpph_field : TextField
+        - amount_baseZp_field : TextField
+        - amount_extramoney_field : TextField
+        - amount_workhours_field : TextField
+        - db_table : TableView<User>
+        - delete_user_button : Button
+        - extra : Button
+        - extraMoney_column : TableColumn<User, Double>
+        - finalZP_label : Label
+        - hours : Button
+        - illHours_column : TableColumn<User, Double>
+        - isExtraMoney_column : TableColumn<User, String>
+        - isextramoney_checkbox : CheckBox
+        - name : Text
+        - name_column : TableColumn<User, String>
+        - otchestvo_column : TableColumn<User, String>
+        - othestvo : Text
+        - pieChart_Update_button : Button
+        - pie_ZpStat_chart : PieChart
+        - position : Text
+        - position_column : TableColumn<User, String>
+        - positions : ToggleGroup
+        - positions_1 : ToggleGroup
+        - rb_position_buhg : RadioButton
+        - rb_position_buhg1 : RadioButton
+        - rb_position_dir : RadioButton
+        - rb_position_dir1 : RadioButton
+        - rb_position_manager : RadioButton
+        - rb_position_manager1 : RadioButton
+        - result1 : Text
+        - result2 : Text
+        - set_addzpph_button : Button
+        - set_base_zp_button : Button
+        - set_extramoney_button : Button
+        - set_isextramoney_button : Button
+        - set_workhours_button : Button
+        - surname : Text
+        - surname_column : TableColumn<User, String>
+        - totalZP_label : Label
+        - update_table_button : Button
+        - user_id_column : TableColumn<User, Integer>
+        - user_to_del_id_field : TextField
+        - userid : Text
+        - usersData : ObservableList<User>
+        - usertoorkId_field : TextField
+        - wotkHours_column : TableColumn<User, Double>
+        - zp : Button
+        - zpph : Button
+        ~ initialize()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.SignInController {
+        ~ ois : ObjectInputStream
+        ~ oos : ObjectOutputStream
+        ~ success : boolean
+        - ErrText : Text
+        - location : URL
+        - logIn_Button : Button
+        - name_field : TextField
+        - otchestvo_field : TextField
+        - password_field : PasswordField
+        - resources : ResourceBundle
+        - surname_field : TextField
+        ~ initialize()
+    }
+  }
+  
+
+  namespace Controllers {
+    class Controllers.UserController {
+        ~ ois : ObjectInputStream
+        ~ oos : ObjectOutputStream
+        - extra : Button
+        - hours : Button
+        - location : URL
+        - name : Text
+        - othestvo : Text
+        - position : Text
+        - resources : ResourceBundle
+        - result1 : Text
+        - result2 : Text
+        - surname : Text
+        - userid : Text
+        - zp : Button
+        - zpph : Button
+        ~ initialize()
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

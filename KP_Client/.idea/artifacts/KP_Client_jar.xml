@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KP_Client:jar">
+    <output-path>$USER_HOME$/Desktop/Прога/Курсач</output-path>
+    <root id="archive" name="KP_Client.jar">
+      <element id="module-output" name="KP_Client" />
+    </root>
+  </artifact>
+</component>

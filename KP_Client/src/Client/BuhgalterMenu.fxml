@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BughalterController">
+    <children>
+        <AnchorPane layoutY="50.0" prefHeight="650.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <TabPane prefHeight="650.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Сотрудники">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="572.0" prefWidth="700.0">
+                                    <children>
+                                        <TableView fx:id="db_table" prefHeight="481.0" prefWidth="900.0">
+                                            <columns>
+                                                <TableColumn fx:id="user_id_column" prefWidth="54.0" text="ID" />
+                                                <TableColumn fx:id="surname_column" prefWidth="102.0" text="Имя" />
+                                                <TableColumn fx:id="name_column" prefWidth="110.0" text="Фамилия" />
+                                                <TableColumn fx:id="otchestvo_column" prefWidth="98.0" text="Отчество" />
+                                                <TableColumn fx:id="position_column" prefWidth="108.0" text="Должность" />
+                                                <TableColumn fx:id="addZpph_column" prefWidth="111.0" text="Надбавка" />
+                                                <TableColumn fx:id="illHours_column" prefWidth="77.0" text="Бол.часы" />
+                                                <TableColumn fx:id="wotkHours_column" prefWidth="69.0" text="Раб. часы" />
+                                                <TableColumn fx:id="extraMoney_column" prefWidth="88.0" text="Премия" />
+                                                <TableColumn fx:id="isExtraMoney_column" prefWidth="82.0" text="Премия" />
+                                            </columns>
+                                        </TableView>
+                                        <Button fx:id="update_table_button" layoutX="14.0" layoutY="493.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Обновить таблицу">
+                                            <font>
+                                                <Font name="Academy" size="21.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="ЗП Сотрудника">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="60.0" prefHeight="33.0" prefWidth="346.0" text="Установить надбавку сотруднику:">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="usertoorkId_field" layoutX="197.0" layoutY="13.0" prefHeight="33.0" prefWidth="109.0" promptText="ID">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <TextField fx:id="amount_addzpph_field" layoutX="373.0" layoutY="60.0" prefHeight="33.0" prefWidth="109.0" promptText="Сумма">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Button fx:id="set_addzpph_button" layoutX="501.0" layoutY="60.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Установить">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="14.0" layoutY="105.0" prefHeight="66.0" prefWidth="339.0" text="Установить количество рабочих часов сотруднику:" wrapText="true">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="amount_workhours_field" layoutX="373.0" layoutY="138.0" prefHeight="33.0" prefWidth="109.0" promptText="Сумма">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label layoutX="14.0" layoutY="15.0" prefHeight="29.0" prefWidth="176.0" text="ID Пользователя">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="set_workhours_button" layoutX="501.0" layoutY="138.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Установить">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="14.0" layoutY="195.0" prefHeight="33.0" prefWidth="339.0" text="Установить премию сотруднику:" wrapText="true">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="amount_extramoney_field" layoutX="373.0" layoutY="195.0" prefHeight="33.0" prefWidth="109.0" promptText="Сумма">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Button fx:id="set_extramoney_button" layoutX="501.0" layoutY="195.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Установить">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="14.0" layoutY="248.0" prefHeight="66.0" prefWidth="339.0" text="Установить количество больничных сотруднику:" wrapText="true">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="amount_illhours_field" layoutX="373.0" layoutY="281.0" prefHeight="33.0" prefWidth="109.0" promptText="Сумма">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Button fx:id="set_illhours_button" layoutX="501.0" layoutY="281.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Установить">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="14.0" layoutY="331.0" prefHeight="66.0" prefWidth="339.0" text="Установить наличие премии у сотрудника:" wrapText="true">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <CheckBox fx:id="isextramoney_checkbox" layoutX="373.0" layoutY="364.0" mnemonicParsing="false" prefHeight="33.0" selected="true" text="Премия">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </CheckBox>
+                                        <Button fx:id="set_isextramoney_button" layoutX="501.0" layoutY="364.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Установить">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="14.0" layoutY="416.0" prefHeight="66.0" prefWidth="436.0" text="Высчитать ЗП сотрудника" wrapText="true">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="finalZpResult_label" layoutX="14.0" layoutY="529.0" prefHeight="33.0" prefWidth="300.0" text="Результат" textFill="#4a6821">
+                                            <font>
+                                                <Font name="Academy" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="finalZpResult_button_1" layoutX="14.0" layoutY="476.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Рассчитать">
+                                            <font>
+                                                <Font name="Academy" size="18.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab text="Профиль">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="zpph" layoutX="687.0" layoutY="400.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="168.0" text="Просмотреть базовую ЗП в час" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Papyrus" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Text fx:id="surname" layoutX="11.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="name" layoutX="10.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="othestvo" layoutX="10.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="position" layoutX="11.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Должность">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="userid" layoutX="845.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="810.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id:">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="extra" layoutX="687.0" layoutY="311.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="168.0" text="Просмотерть наличие и сумму премии" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Papyrus" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="hours" layoutX="687.0" layoutY="225.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="168.0" text="Просмотреть кол-во рабочих часов" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Papyrus" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="zp" layoutX="687.0" layoutY="136.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="168.0" text="Рассчитать ЗП" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Papyrus" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Text fx:id="result1" layoutX="34.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="result2" layoutX="34.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+        <Label layoutX="291.0" prefHeight="44.0" prefWidth="319.0" text="Меню бухгалтера" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman" size="32.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
