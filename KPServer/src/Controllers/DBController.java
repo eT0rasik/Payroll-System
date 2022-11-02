@@ -8,8 +8,8 @@ import java.io.ObjectOutputStream;
 import java.sql.*;
 public class DBController {
     public static final String USER_NAME = "root";
-    public static final String PASSWORD = "1503ROME";
-    public static final String URL = "jdbc:mysql://localhost:3306/final_kp_users_database";
+    public static final String PASSWORD = "Password";
+    public static final String URL = "jdbc:mysql://localhost:3306/database_name";
     public static Statement statement;
     public static Statement statement2;
     public static Connection connection;
